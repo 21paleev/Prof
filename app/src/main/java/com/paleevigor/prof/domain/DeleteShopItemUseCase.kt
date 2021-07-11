@@ -1,7 +1,7 @@
 package com.paleevigor.prof.domain
 
-class DeleteShopItemUseCase {
-    fun deliteShopItem(shopItem:ShopItem){
-
+class DeleteShopItemUseCase(private val shopListRepository: ShopListRepository) {
+    fun deliteShopItem(shopItem: ShopItem) {
+        shopListRepository.deleteShopItem(shopItem)
     }
 }

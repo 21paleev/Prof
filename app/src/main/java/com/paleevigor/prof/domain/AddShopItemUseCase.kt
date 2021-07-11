@@ -1,7 +1,7 @@
 package com.paleevigor.prof.domain
 
-class AddShopItemUseCase {
-    fun addShopIten(shopItem:ShopItem){
-
+class AddShopItemUseCase(private val shopListRepository: ShopListRepository) {
+    fun addShopIten(shopItem: ShopItem) {
+        shopListRepository.addShopItem(shopItem)
     }
 }
